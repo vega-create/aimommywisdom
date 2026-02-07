@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aimommywisdom.com/sitemap-index.xml

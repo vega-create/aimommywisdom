@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const works = [
+  { img: '/images/work-course.png', title: '線上/實體課程網站', type: 'Website Design', url: 'https://aimommywisdom.work/官網1' },
+  { img: '/images/work-beauty.png', title: '美業學習網站', type: 'Website Design', url: 'https://aimommywisdom.work/官網2' },
+  { img: '/images/work-memorial.png', title: '生命禮儀網站', type: 'Website Design', url: 'https://aimommywisdom.work/官網3' },
+  { img: '/images/work-video.png', title: '影像製作網站', type: 'Website Design', url: 'https://aimommywisdom.work/關網4' },
+  { img: '/images/work-engineering.png', title: '工程行網站', type: 'Website Design', url: 'https://aimommywisdom.work/官網5' },
+  { img: '/images/work-english.png', title: '英文補習班', type: 'Website Design', url: 'https://aimommywisdom.work/官網6' },
+];
+---
+
+<BaseLayout title="作品集" description="智慧媽咪的網站設計作品集，各行各業皆可為您規劃專業網站。" activePage="works">
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <h3>Portfolio</h3>
+      <h2>各行各業皆可以為您規劃</h2>
+    </div>
+    <div class="portfolio-grid">
+      {works.map((w) => (
+        <a href={w.url} target="_blank" rel="noopener noreferrer" class="portfolio-item">
+          <img src={w.img} alt={w.title}>
+          <div class="overlay">
+            <h3>{w.title}</h3>
+            <span>{w.type}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
