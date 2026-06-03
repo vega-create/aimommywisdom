@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../site.config';
+import WebSiteSchema from '../components/WebSiteSchema.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -47,6 +48,7 @@ const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
   {siteConfig.adsense.enabled && (
     <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsense.client}`} crossorigin="anonymous"></script>
   )}
+  <WebSiteSchema />
 </head>
 <body>
 <header class="header">

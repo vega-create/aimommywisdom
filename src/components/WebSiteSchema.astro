@@ -1,0 +1,78 @@
+---
+import { siteConfig } from '../site.config';
+
+// AiMommyWisdom is the corporate parent entity (智慧媽咪國際有限公司).
+// All sister brand sites point to this as parentOrganization. So here we
+// emit the FULL legal-entity Organization Schema as the canonical source.
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteConfig.url}#website`,
+      name: siteConfig.name,
+      alternateName: siteConfig.nameEn,
+      url: siteConfig.url,
+      description: siteConfig.description,
+      inLanguage: 'zh-TW',
+      publisher: { '@id': `${siteConfig.url}#organization` },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}#organization`,
+      name: siteConfig.company.name,
+      legalName: 'Mommy Wisdom International LTD.',
+      alternateName: 'AiMommyWisdom',
+      url: siteConfig.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.url}/images/logo.png`,
+      },
+      taxID: siteConfig.company.taxId,
+      telephone: siteConfig.company.phone,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: siteConfig.company.address,
+        addressCountry: 'TW',
+      },
+      founder: {
+        '@type': 'Person',
+        name: 'Vega Lin (薇佳)',
+        jobTitle: 'Founder & CEO',
+        url: 'https://chparenting.com/about/',
+        description:
+          '東海大學數位創新碩士在讀，8+ 年數位行銷經驗（Google Ads/Facebook Ads/SEO），前英文老師，兩個孩子的媽。',
+        alumniOf: { '@type': 'EducationalOrganization', name: 'Tunghai University' },
+      },
+      sameAs: [
+        siteConfig.social.facebook,
+        siteConfig.social.instagram,
+        'https://chparenting.com',
+        'https://baby.chparenting.com',
+        'https://pregnancy.chparenting.com',
+        'https://learn.chparenting.com',
+        'https://english.chparenting.com',
+        'https://kids.chparenting.com',
+        'https://mommystartup.com',
+        'https://mommywisdom.tw',
+        'https://vega-note.com',
+      ],
+      subOrganization: [
+        { '@type': 'Organization', name: '媽媽生活復原力Lab', url: 'https://chparenting.com' },
+        { '@type': 'Organization', name: 'Mommy Startup', url: 'https://mommystartup.com' },
+        { '@type': 'Organization', name: '跟著媽咪團好康', url: 'https://mommywisdom.tw' },
+      ],
+      knowsAbout: [
+        'AI 行銷',
+        '數位行銷',
+        '品牌策略',
+        'SEO 優化',
+        'Google Ads',
+        'Facebook Ads',
+        '客製化行銷方案',
+      ],
+    },
+  ],
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
