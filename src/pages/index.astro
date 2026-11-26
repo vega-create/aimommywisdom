@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../site.config';
 ---
 
 <BaseLayout activePage="home">
@@ -30,6 +31,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 </section>
 
+<!-- 系統建置（新服務） -->
+<section class="sysbuild" id="system">
+  <div class="sysbuild-inner">
+    <div class="sysbuild-text">
+      <div class="sub-label"><span class="badge-new">NEW</span> SYSTEM BUILDING</div>
+      <h2>系統建置</h2>
+      <p class="sysbuild-lead">用 AI 與 Vibe Coding，為您的公司量身打造專屬系統</p>
+      <p>從 LINE 官方帳號自動化、內部管理後台，到串接 AI 的工作流程，智慧媽咪協助中小企業把重複的人工作業變成 24 小時運作的系統：省人力、少出錯、資料一目了然。</p>
+      <ul class="sysbuild-list">
+        <li><i class="fas fa-check"></i> LINE 官方帳號自動回覆、提醒通知與客戶管理</li>
+        <li><i class="fas fa-check"></i> 內部管理系統：任務回報、排程提醒、報表自動產出</li>
+        <li><i class="fas fa-check"></i> 預約、表單、電子報等客戶互動系統</li>
+        <li><i class="fas fa-check"></i> 串接 AI 的自動化工作流程，小團隊也能高效運作</li>
+      </ul>
+      <div class="sysbuild-actions">
+        <a href={siteConfig.social.line} class="btn-line btn-line-lg" target="_blank" rel="noopener"><i class="fab fa-line"></i> 加 LINE 免費討論需求</a>
+        <a href="/services/#system" class="link-more">了解系統建置服務 →</a>
+      </div>
+      <p class="line-id">LINE ID：<strong>{siteConfig.social.lineId}</strong></p>
+    </div>
+    <div class="sysbuild-img">
+      <img src="/images/service-seo.png" alt="客製化系統建置">
+    </div>
+  </div>
+</section>
+
 <!-- 我們的願景 -->
 <section class="vision">
   <div class="vision-inner">
@@ -41,7 +68,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="vision-card">
         <div class="num">01</div>
         <h3>AI行銷</h3>
-        <p>我們提供AI網站、AI短影音策略規劃服務，提供客製系統與規畫，讓您在業界上的曝光量與聲量，生生不息，讓受眾印象深刻忘不了。</p>
+        <p>我們提供AI網站、AI短影音策略規劃與客製化系統建置，讓您在業界上的曝光量與聲量，生生不息，讓受眾印象深刻忘不了。</p>
       </div>
       <div class="vision-card">
         <div class="num">02</div>
@@ -64,7 +91,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h3>智 慧 媽 咪 A I 行 銷 團 隊</h3>
       <h2>創造品牌的最大值</h2>
     </div>
-    <div class="services-grid">
+    <div class="services-grid services-grid-5">
+      <div class="service-card service-card-new">
+        <img src="/images/service-seo.png" alt="系統建置">
+        <div class="service-card-body">
+          <h3>系統建置 <span class="badge-new">NEW</span></h3>
+          <p>智慧媽咪以 AI 與 Vibe Coding 為企業量身打造 LINE 自動化、內部管理後台與客戶互動系統，把重複作業交給系統，團隊專注在成長。</p>
+        </div>
+      </div>
       <div class="service-card">
         <img src="/images/service-ai-website.png" alt="AI網站">
         <div class="service-card-body">
@@ -94,6 +128,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- LINE CTA -->
+<section class="cta-banner cta-line">
+  <div style="max-width:800px; margin: 0 auto; padding: 0 30px;">
+    <h2>想知道您的公司適合什麼系統？</h2>
+    <p>加入智慧媽咪 LINE 官方帳號，直接告訴我們您的需求，我們會為您初步規劃</p>
+    <div class="cta-actions">
+      <a href={siteConfig.social.line} class="btn-line btn-line-lg" target="_blank" rel="noopener"><i class="fab fa-line"></i> 加入 LINE 官方帳號</a>
+      <a href="/contact/" class="btn-red"><i class="fas fa-comments"></i> 填寫需求表單</a>
+    </div>
+    <p class="line-id">或在 LINE 搜尋 ID：<strong>{siteConfig.social.lineId}</strong></p>
   </div>
 </section>
 

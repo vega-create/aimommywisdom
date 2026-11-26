@@ -8,7 +8,9 @@ import { siteConfig } from '../site.config';
     <div class="contact-grid">
       <div class="contact-info">
         <h2>與我們取得聯繫</h2>
-        <p>無論您有任何數位行銷、網站架設或 AI 行銷的需求，歡迎隨時與我們聯繫。我們將盡速回覆您！</p>
+        <p>無論您有任何系統建置、數位行銷、網站架設或 AI 行銷的需求，歡迎隨時與我們聯繫。我們將盡速回覆您！</p>
+        <a href={siteConfig.social.line} class="btn-line" target="_blank" rel="noopener" style="margin-bottom: 28px;"><i class="fab fa-line"></i> 加 LINE 官方帳號，最快得到回覆</a>
+        <p class="line-id" style="margin: -16px 0 28px;">LINE ID：<strong>{siteConfig.social.lineId}</strong></p>
         <div class="info-list">
           <div class="info-item">
             <div class="icon"><i class="fas fa-building"></i></div>
@@ -50,6 +52,7 @@ import { siteConfig } from '../site.config';
             <label>您感興趣的服務</label>
             <select name="service">
               <option value="">請選擇</option>
+              <option>系統建置</option>
               <option>網站架設</option>
               <option>行銷服務</option>
               <option>行銷顧問</option>

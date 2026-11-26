@@ -11,7 +11,8 @@ export const siteConfig = {
     address: '台中市潭子區合作街95號',
   },
   social: {
-    line: 'https://line.me/ti/p/~@aimommywisdom',
+    line: 'https://lin.ee/9ynfR0n',
+    lineId: '@aimommywisdom',
     facebook: 'https://www.facebook.com/aimommywisdom/',
     instagram: 'https://www.instagram.com/aimommywisdom/',
   },
