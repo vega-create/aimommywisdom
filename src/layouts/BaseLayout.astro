@@ -68,6 +68,7 @@ const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
       </li>
       <li><a href="/works/" class:list={[{ active: activePage === 'works' }]}>作品集</a></li>
       <li><a href="/contact/" class:list={[{ active: activePage === 'contact' }]}>聯絡我們</a></li>
+      <li><a href={siteConfig.social.line} class="nav-line" target="_blank" rel="noopener"><i class="fab fa-line"></i> LINE 諮詢</a></li>
     </ul>
     <button class="mobile-toggle" id="menuOpen" aria-label="開啟選單"><i class="fas fa-bars"></i></button>
   </div>
@@ -85,9 +86,13 @@ const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
     <a href="/cases/interiordesign/" class="sub-link">室內設計</a>
     <a href="/works/">作品集</a>
     <a href="/contact/">聯絡我們</a>
+    <a href={siteConfig.social.line} class="mobile-line" target="_blank" rel="noopener"><i class="fab fa-line"></i> 加入 LINE 官方帳號</a>
   </div>
 </div>
 <main><slot /></main>
+<a href={siteConfig.social.line} class="line-float" target="_blank" rel="noopener" aria-label="加入 LINE 官方帳號諮詢">
+  <i class="fab fa-line"></i><span>LINE 諮詢</span>
+</a>
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top-label">品牌行銷最佳選擇</div>
