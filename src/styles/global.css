@@ -1081,3 +1081,8 @@ ul { list-style: none; }
   background: var(--red); color: var(--white); font-size: 13px; font-weight: 700;
   display: inline-flex; align-items: center; justify-content: center;
 }
+
+/* 案例內文圖 */
+.case-figure { margin: 36px 0; }
+.case-figure img { width: 100%; border-radius: 10px; box-shadow: 0 12px 40px rgba(0,0,0,0.18); }
+.case-figure figcaption { font-size: 13px; color: var(--text-lighter); text-align: center; margin-top: 12px; }

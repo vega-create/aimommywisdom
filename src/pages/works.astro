@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const works = [
+  { img: '/images/case-servicem8.svg', title: 'ServiceM8 營運數據儀表板', type: 'System Building', url: '/cases/servicem8-dashboard/', internal: true },
   { img: '/images/work-course.png', title: '線上/實體課程網站', type: 'Website Design', url: 'https://aimommywisdom.work/官網1' },
   { img: '/images/work-beauty.png', title: '美業學習網站', type: 'Website Design', url: 'https://aimommywisdom.work/官網2' },
   { img: '/images/work-memorial.png', title: '生命禮儀網站', type: 'Website Design', url: 'https://aimommywisdom.work/官網3' },
@@ -11,7 +12,7 @@ const works = [
 ];
 ---
 
-<BaseLayout title="作品集" description="智慧媽咪的網站設計作品集，各行各業皆可為您規劃專業網站。" activePage="works">
+<BaseLayout title="作品集" description="智慧媽咪的網站設計與客製化系統作品集，各行各業皆可為您規劃。" activePage="works">
 
 <section class="section">
   <div class="section-inner">
@@ -21,7 +22,7 @@ const works = [
     </div>
     <div class="portfolio-grid">
       {works.map((w) => (
-        <a href={w.url} target="_blank" rel="noopener noreferrer" class="portfolio-item">
+        <a href={w.url} target={w.internal ? undefined : '_blank'} rel={w.internal ? undefined : 'noopener noreferrer'} class="portfolio-item">
           <img src={w.img} alt={w.title}>
           <div class="overlay">
             <h3>{w.title}</h3>
