@@ -24,5 +24,4 @@ export const siteConfig = {
     client: 'ca-pub-3493526929407874',
     enabled: false,
   },
-  formspree: 'https://formspree.io/f/xlgwejje',
 };

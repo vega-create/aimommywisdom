@@ -1068,3 +1068,16 @@ ul { list-style: none; }
   .line-float { right: 16px; bottom: 16px; padding: 12px 14px; }
   .line-float span { display: none; }
 }
+
+/* 聯絡頁：LINE 聯絡卡（取代表單） */
+.contact-line { text-align: center; }
+.contact-line-icon { font-size: 56px; color: #06C755; margin-bottom: 12px; line-height: 1; }
+.contact-line > p { font-size: 15px; color: var(--text-light); line-height: 1.9; margin-bottom: 24px; }
+.contact-line .btn-line-lg { padding: 18px 40px; font-size: 17px; }
+.contact-line-steps { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--border); text-align: left; }
+.contact-line-steps div { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text); padding: 8px 0; }
+.contact-line-steps span {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--red); color: var(--white); font-size: 13px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+}
