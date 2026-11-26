@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { siteConfig } from '../../site.config';
+---
+
+<BaseLayout title="ServiceM8 營運數據儀表板｜澳洲清潔服務公司客製化系統案例" description="為使用 ServiceM8 的澳洲清潔服務公司打造一頁式營運儀表板：自動同步案件與工單、新客轉換率、回頭客、員工績效，取代難用的內建報表與人工記錄名單。" activePage="cases">
+
+<article class="case-article" style="padding-top: 40px;">
+  <img src="/images/case-servicem8.svg" alt="ServiceM8 營運數據儀表板" class="case-banner-img">
+  <h1>ServiceM8 營運數據儀表板｜澳洲清潔服務公司客製化系統案例</h1>
+  <div class="case-subtitle">內建報表看不懂、名單靠人工記？我們做了一個老闆真的會打開的儀表板</div>
+  <div class="case-date"><i class="far fa-calendar-alt"></i> 2026 年 11 月 <span class="badge-new" style="margin-left:10px;">客製化系統建置</span></div>
+
+  <p>這位客戶是澳洲墨爾本的清潔服務公司，日常派工、報價、開單都在 <strong>ServiceM8</strong> 上完成。系統本身功能齊全，但業主一直有兩個困擾：</p>
+  <ul>
+    <li><strong>ServiceM8 內建的儀表板與報表很難用</strong>：欄位多、設定複雜，想知道「這個月進來幾個新客、幾個變成工單」要點好幾層，最後乾脆不看</li>
+    <li><strong>名單還是靠人工記</strong>：新詢問進來後，由員工另外抄到試算表追蹤，一忙就漏記、重複，月底對不起來</li>
+  </ul>
+  <p>結果是：資料明明都在系統裡，業主卻說不出這個月的成交率、回頭客有多少、哪位員工處理最多案子。</p>
+
+  <h2>我們做了什麼｜用 ServiceM8 的資料，做一個看得懂的儀表板</h2>
+  <p>我們沒有要客戶換系統，而是直接串接 ServiceM8 API，把資料自動抓出來，重新整理成<strong>一頁式、老闆看得懂的營運儀表板</strong>：</p>
+  <ul>
+    <li><strong>自動同步，不用人工記錄：</strong>所有新案件（含報價）、工單、完工狀態與負責員工，定時從 ServiceM8 自動匯入並更新，名單不再需要另外抄寫</li>
+    <li><strong>六個關鍵指標一眼看完：</strong>新案件數、新客轉工單率、新客完工率、回頭客數、回頭客完工率、整體成功率</li>
+    <li><strong>期間隨切、可比較：</strong>今天／本週／本月／全部／自訂區間，並可勾選與上一期比較，看趨勢是上升還是下滑</li>
+    <li><strong>案件明細可篩選：</strong>依類型（新客／回頭客）與狀態（報價／工單／完工）篩選，每筆案件的客戶、更新時間、負責員工都在同一張表</li>
+    <li><strong>員工績效分頁：</strong>每位員工處理的案件數與完成狀況，排班與獎勵有數據依據</li>
+    <li><strong>一鍵匯出 CSV：</strong>需要給會計或做進一步分析時直接下載</li>
+  </ul>
+  <p>儀表板是網頁版，顯示當地（墨爾本）時間與最後更新時間，手機、電腦打開就能看，並設有登入保護，只有授權的人能存取。</p>
+
+  <figure class="case-figure">
+    <img src="/images/case-servicem8-dashboard.svg" alt="ServiceM8 營運數據儀表板畫面示意（客戶與員工姓名已打碼）">
+    <figcaption>儀表板畫面示意。為保護客戶隱私，公司名稱、客戶與員工姓名皆已打碼；數字為實際本月資料。</figcaption>
+  </figure>
+
+  <h2>成果｜數字自己說話，名單不再靠人記</h2>
+  <ul>
+    <li>人工抄名單的工作<strong>完全省下</strong>，漏記、重複的問題消失</li>
+    <li>業主每天打開一頁，就知道新客多少、轉換率多少、回頭客多少，不用再進 ServiceM8 翻報表</li>
+    <li>第一次看得到「新客 → 報價 → 工單 → 完工」每一段的流失，知道該加強報價跟進還是服務品質</li>
+    <li>員工績效透明，管理與行銷討論都有同一份即時數據可依據</li>
+  </ul>
+
+  <h2>這套系統適合誰？</h2>
+  <p>如果您的公司使用 ServiceM8、Jobber、Tradify 這類派工系統，覺得內建報表難用、或名單與案件還靠人工追蹤，這套儀表板都可以依您的流程客製。我們會先了解您的作業方式與想看的指標，再規劃最省力的串接方式。</p>
+
+  <div class="faq-section">
+    <h2>常見問題 FAQ</h2>
+    <div class="faq-item">
+      <h3>Q1｜一定要用 ServiceM8 才能做嗎？</h3>
+      <p>不用。ServiceM8 只是這位客戶原本使用的系統。只要您的派工、報價或 CRM 工具有 API 或可匯出資料，都能串接；沒有系統的客戶，我們也能從表單與 LINE 開始建立名單與案件記錄。</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q2｜資料會不會不同步或漏掉？</h3>
+      <p>儀表板定時自動從 ServiceM8 同步，畫面上會顯示最後更新時間；資料以 ServiceM8 為準，不經過人工轉抄，因此不會有漏記的問題。</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q3｜建置需要多久？費用怎麼算？</h3>
+      <p>依串接的資料範圍與報表需求而定，一般從需求訪談到上線約數週。費用採專案報價，包含規劃、建置、上線教學與一段期間的維護。歡迎加 LINE 告訴我們您的狀況，我們會先給初步建議。</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q4｜儀表板可以加上其他數據嗎？</h3>
+      <p>可以。常見的延伸包含 Google Ads／Facebook 廣告花費自動匯入、GA4 網站流量、每月自動寄送報表給業主，以及 LINE 或 Email 的異常提醒。</p>
+    </div>
+  </div>
+</article>
+
+<section class="cta-banner cta-line">
+  <div style="max-width:800px; margin: 0 auto; padding: 0 30px;">
+    <h2>想要一套老闆真的會打開的儀表板？</h2>
+    <p>加入智慧媽咪 LINE 官方帳號，告訴我們您現在用什麼系統、想看什麼數字，我們會為您初步規劃</p>
+    <div class="cta-actions">
+      <a href={siteConfig.social.line} class="btn-line btn-line-lg" target="_blank" rel="noopener"><i class="fab fa-line"></i> 加入 LINE 官方帳號</a>
+      <a href="/services/#system" class="btn-red">了解客製化系統建置</a>
+    </div>
+    <p class="line-id">或在 LINE 搜尋 ID：<strong>{siteConfig.social.lineId}</strong></p>
+  </div>
+</section>
+
+</BaseLayout>

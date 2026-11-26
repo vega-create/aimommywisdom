@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" font-family="'Noto Sans TC','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f1f24"/><stop offset="1" stop-color="#2d2d2d"/></linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#AA162C"/><stop offset="1" stop-color="#D4263E"/></linearGradient>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bg)"/>
+  <!-- left copy -->
+  <text x="90" y="150" fill="#D4263E" font-size="20" letter-spacing="6" font-weight="700">SYSTEM BUILDING · CASE</text>
+  <text x="90" y="235" fill="#fff" font-size="64" font-weight="900">ServiceM8</text>
+  <text x="90" y="310" fill="#fff" font-size="64" font-weight="900">營運數據儀表板</text>
+  <text x="90" y="372" fill="#cfcfcf" font-size="24">自動同步工單與客戶，不再手動記錄名單</text>
+  <g fill="#9fdcb6" font-size="20">
+    <text x="90" y="440">✓  新客 → 報價 → 工單 → 完工 轉換率一眼看懂</text>
+    <text x="90" y="482">✓  每日自動同步 ServiceM8 資料</text>
+    <text x="90" y="524">✓  員工績效、回頭客、CSV 匯出一應俱全</text>
+  </g>
+  <!-- dashboard mock -->
+  <g transform="translate(820 90)" filter="url(#sh)">
+    <rect width="690" height="520" rx="18" fill="#f6f6f8"/>
+    <rect width="690" height="56" rx="18" fill="#fff"/>
+    <rect y="38" width="690" height="18" fill="#fff"/>
+    <circle cx="28" cy="28" r="7" fill="#ff5f57"/><circle cx="50" cy="28" r="7" fill="#febc2e"/><circle cx="72" cy="28" r="7" fill="#28c840"/>
+    <text x="345" y="34" text-anchor="middle" fill="#666" font-size="15">Business Dashboard · This Month</text>
+    <!-- KPI tiles -->
+    <g transform="translate(24 76)">
+      <rect width="150" height="92" rx="12" fill="#fff"/><text x="16" y="30" fill="#888" font-size="13">New Cases</text><text x="16" y="70" fill="#222" font-size="34" font-weight="700">77</text>
+      <rect x="164" width="150" height="92" rx="12" fill="#fff"/><text x="180" y="30" fill="#888" font-size="13">New → Work Order</text><text x="180" y="70" fill="#222" font-size="34" font-weight="700">75.3%</text>
+      <rect x="328" width="150" height="92" rx="12" fill="#fff"/><text x="344" y="30" fill="#888" font-size="13">Returning</text><text x="344" y="70" fill="#AA162C" font-size="34" font-weight="700">627</text>
+      <rect x="492" width="150" height="92" rx="12" fill="#fff"/><text x="508" y="30" fill="#888" font-size="13">Overall Success</text><text x="508" y="70" fill="#06C755" font-size="34" font-weight="700">85%</text>
+    </g>
+    <!-- trend chart -->
+    <g transform="translate(24 188)">
+      <rect width="400" height="300" rx="12" fill="#fff"/>
+      <text x="16" y="28" fill="#444" font-size="14" font-weight="700">New cases by week</text>
+      <polyline points="30,250 80,220 130,235 180,180 230,190 280,140 330,120 380,95" fill="none" stroke="url(#red)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="#D4263E"><circle cx="30" cy="250" r="5"/><circle cx="80" cy="220" r="5"/><circle cx="130" cy="235" r="5"/><circle cx="180" cy="180" r="5"/><circle cx="230" cy="190" r="5"/><circle cx="280" cy="140" r="5"/><circle cx="330" cy="120" r="5"/><circle cx="380" cy="95" r="5"/></g>
+      <line x1="20" y1="270" x2="385" y2="270" stroke="#e5e5e5"/>
+    </g>
+    <!-- source bars -->
+    <g transform="translate(442 188)">
+      <rect width="224" height="300" rx="12" fill="#fff"/>
+      <text x="16" y="28" fill="#444" font-size="14" font-weight="700">Staff performance</text>
+      <g font-size="12" fill="#666">
+        <text x="16" y="66">Staff A</text><rect x="16" y="74" width="180" height="12" rx="6" fill="#eee"/><rect x="16" y="74" width="150" height="12" rx="6" fill="#AA162C"/>
+        <text x="16" y="116">Staff B</text><rect x="16" y="124" width="180" height="12" rx="6" fill="#eee"/><rect x="16" y="124" width="104" height="12" rx="6" fill="#D4263E"/>
+        <text x="16" y="166">Staff C</text><rect x="16" y="174" width="180" height="12" rx="6" fill="#eee"/><rect x="16" y="174" width="76" height="12" rx="6" fill="#e86a7d"/>
+        <text x="16" y="216">Staff D</text><rect x="16" y="224" width="180" height="12" rx="6" fill="#eee"/><rect x="16" y="224" width="52" height="12" rx="6" fill="#f0a3af"/>
+        <text x="16" y="266">Staff E</text><rect x="16" y="274" width="180" height="12" rx="6" fill="#eee"/><rect x="16" y="274" width="30" height="12" rx="6" fill="#f6c9d0"/>
+      </g>
+    </g>
+  </g>
+</svg>
